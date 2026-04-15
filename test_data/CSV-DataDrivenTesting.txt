@@ -1,0 +1,5 @@
+1. Install required libraries 'npm Install csv-parse xlsx'
+2. In test_data folder create a csv file 'LoginData.csv' and add Data
+3. In utils folder create CSV Utility function 'csvReader.ts'
+4. Use CSV Data in Test login_csv.spec.ts file
+5. Run and check 'npx playwright test'

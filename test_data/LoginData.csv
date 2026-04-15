@@ -1,0 +1,4 @@
+username, password,      expected, run
+tomtom,   12345678,      success,  true
+tomtom,   wrongpassword, error,    false
+tom,      12345678,      error,    true

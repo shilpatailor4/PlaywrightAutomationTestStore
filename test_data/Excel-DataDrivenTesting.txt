@@ -1,0 +1,22 @@
+1. Install required libraries 'npm install xlsx' and 'npm install -D @types/xlsx'
+2. In test_data folder create a excel file 'LoginData.xlsx' and add Data
+3. In utils folder create Excel Utility function 'excelReader.ts'
+4. use Excel data in Test 'login.spec.ts'
+5. make framework more maintainable by adding
+1. string typing
+2. No unsafe any
+3. Cleaner architecture
+4. better reporting
+
+
+We'll improve the framework in 3 ways
+1. Remove as any[] (make it fully type safe)
+2. Clean structure using proper typing
+3. Add test.setp() for better reporting
+
+
+1. Make sure readExcel Return proper type
+2. Type TestData properly in login.spec.ts
+3. Remove as any[] in login.spec.ts
+4. Add test.step() for better reporting
+5. Optional  - Automatically skip test using test.skip() intead of continue;

@@ -1,0 +1,22 @@
+[
+  {
+    "username": "tomtom",
+    "password": "12345678",
+    "expected": "success",
+    "run": true
+  },
+
+  {
+    "username": "tomtom",
+    "password": "wrongpassword",
+    "expected": "failure",
+    "run": true
+  },
+
+  {
+    "username": "tom",
+    "password": "wrongpassword",
+    "expected": "failure",
+    "run": false
+  }
+]

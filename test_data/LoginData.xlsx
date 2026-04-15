@@ -1,4 +1,4 @@
 username  password       expected    run
-tomtom    12345678       success     true
-tom       wrongpassword  error       true
-tomtom    123456789      error       false
+tomtom    12345678       success     "yes"
+tom       wrongpassword  error       "yes"
+tomt      123456789      error       "no"

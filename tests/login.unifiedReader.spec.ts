@@ -1,14 +1,16 @@
 import { test, expect } from "@playwright/test";
 import { LoginPage } from "../pages/LoginPage";
-import { readExcel } from "../utils/excelReader";
+import { readData } from "../utils/dataReader";
 
-const testData = readExcel("./test_data/LoginData.xlsx", "Sheet1");
+// const testData = readData("./test_data/loginDataNew.json");
+// const testData = readData("./test_data/LoginData.csv");
+const testData = readData("./test_data/LoginData.xlsx", "Sheet1");
 
-test.describe("Excel Tests", () => {
+test.describe("Login Tests", () => {
   for (const data of testData) {
     // if (data.run !== "yes") continue; // skip test if run is false
 
-    test(`Excel Data Test - ${data.username}`, async ({ page }) => {
+    test(`Login test for - ${data.username}`, async ({ page }) => {
       test.skip(data.run !== "yes", "Skipping test as run is set to false");
 
       const loginPage = new LoginPage(page);

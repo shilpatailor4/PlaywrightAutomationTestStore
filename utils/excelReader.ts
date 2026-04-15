@@ -1,5 +1,5 @@
 import * as XLSX from "xlsx";
-import path from "path";
+import * as path from "path";
 
 export type LoginData = {
   username: string;
@@ -9,8 +9,8 @@ export type LoginData = {
 };
 
 export function readExcel(filePath: string, sheetName: string): LoginData[] {
-  const fullPath = path.resolve(filePath);
-  console.log("File path", fullPath);
+  const fullPath = path.join(process.cwd(), filePath);
+  console.log("Reading file from:", fullPath);
 
   const workbook = XLSX.readFile(fullPath);
   const sheet = workbook.Sheets[sheetName];

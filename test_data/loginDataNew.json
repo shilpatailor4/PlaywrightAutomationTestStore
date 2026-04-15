@@ -3,20 +3,20 @@
     "username": "tomtom",
     "password": "12345678",
     "expected": "success",
-    "run": true
+    "run": "yes"
   },
 
   {
-    "username": "tomtom",
+    "username": "tomt",
     "password": "wrongpassword",
     "expected": "failure",
-    "run": true
+    "run": "yes"
   },
 
   {
     "username": "tom",
     "password": "wrongpassword",
     "expected": "failure",
-    "run": false
+    "run": "no"
   }
 ]

@@ -5,7 +5,7 @@ import { csvReader } from "../utils/csvReader";
 const loginData = csvReader("test_data/LoginData.csv");
 
 loginData.forEach((data: any) => {
-  if (data.run !== "true") return; // Skip test if run is not true
+  if (data.run !== "yes") return; // Skip test if run is not true
 
   test(`Login with ${data.username}/${data.password}`, async ({ page }) => {
     const loginPage = new LoginPage(page);
